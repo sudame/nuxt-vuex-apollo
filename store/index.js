@@ -51,12 +51,9 @@ export default () =>
             `,
           })
           .then(data => {
-            console.log('then');
-            console.log(data.data.result.projects);
             commit('updateProjects', data.data.result.projects);
           })
           .catch(error => {
-            console.log('catch');
             console.log(error);
           });
       },
